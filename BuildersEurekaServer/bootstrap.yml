@@ -1,6 +1,10 @@
 spring:
   application:
     name: BuildersEurekaServer
+  cloud:
+    config:
+      name: BuildersEurekaServer
+      uri: http://localhost:8081
 eureka:
   client:
     serviceUrl:
