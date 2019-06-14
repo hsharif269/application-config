@@ -4,3 +4,7 @@ eureka:
     register-with-eureka: true
     service-url: http://localhost:8761/eureka
     fetch-registry: true
+
+#app related properties
+test:
+  var: I am testing.
