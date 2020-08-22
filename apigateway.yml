@@ -1,12 +1,23 @@
-zuul:
-  sensitive-headers: Cookie,Set-Cookie
-  routes:
-    userProfile:
-      path: /userProfile/**
-      url: http://localhost:8082
-
 security:
   oauth2:
     resource:
       jwt:
         key-value: 123
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      database: test
+      #            host: localhost
+      #            password: root
+      port: 27017
+      username: root
+zuul:
+  routes:
+    oauth:
+      path: /oauth/**
+      url: http://localhost:8090
+    userProfile:
+      path: /userProfile/**
+      url: http://localhost:8082
+  sensitive-headers: Cookie,Set-Cookie
